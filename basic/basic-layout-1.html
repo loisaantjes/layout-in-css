@@ -6,8 +6,30 @@
     <title>Basic Layout 1</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-      body {
-        display: grid;
+      body { 
+        /* Deze body is een grid-element */
+        display: grid; 
+        /* De grid bestaat uit twee kolommen en geven de maat aan van de kolommen */
+        grid-template-columns: 1fr 4fr; 
+        /* Dit zijn drie rijen en geven de maat aan van de rijen. */
+         grid-template-rows: 2fr 6fr 1fr;
+         /* Dit is de ruimte tussen de kolommen en de rijen */
+        gap: 1em;
+       
+      }
+      /* De kinderen nemen 1 grid in beslag. */
+      header {
+        /* De header start bij kolomlijn 1... */
+        grid-column-start: 1;
+        /*... en eindigt bij kolomlijn 3. */
+        grid-column-end: 3;
+      }
+    
+      footer {
+        /* De footer begint bij kolomlijn 1... */
+        grid-column-start: 1;
+        /* ... en eindigt bij kolomlijn 3. */
+        grid-column-end: 3;
       }
       /* Doe hier jouw ding! */
     </style>
